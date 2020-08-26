@@ -2,9 +2,8 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Main from '../src/pages/Main';
-import City from '../src/pages/City';
+import CityBar from '../src/pages/CityBar';
 import About from '../src/pages/About';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import { Text, StyleSheet } from 'react-native';
 
 const Tab = createBottomTabNavigator();
@@ -21,7 +20,7 @@ function BottomTabs() {
                     }
                 
                 }}/>
-                <Tab.Screen name="City" component={City} options={{
+                <Tab.Screen name="City" component={CityBar} options={{
                     tabBarLabel: () => {
                         return (
                             <Text style={styles.labelText}>Cidades</Text>
