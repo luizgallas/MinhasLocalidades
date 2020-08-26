@@ -1,5 +1,17 @@
 import React from 'react';
-import { Container, Title, TextDescription, Text, LinkText, BigText } from './styles';
+import { Container,
+        Title,
+        TextDescription,
+        Text, LinkText,
+        BigText,
+        IconText,
+        IconContainer,
+        OutsideIconContainer,
+        FontContainer,
+        SecundaryText }
+    from './styles';
+
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function About() {
     return (
@@ -13,18 +25,22 @@ export default function About() {
 
             <Text>As cores utilizadas são as que encontramos no site Livelo:</Text>
 
-            <Container>
-                <Text>Rosa Livelo - #E50191</Text>
-            </Container>
+            <OutsideIconContainer>
+                <IconContainer>
+                    <Icon name='circle' color='#E50191' size={32} ></Icon>
+                    <IconText>Rosa Livelo - #E50191</IconText>
+                 </IconContainer>
 
-            <Container>
-                <Text>Azul Livelo - #191055</Text>
-            </Container>
+                <IconContainer>
+                    <Icon name='circle' color='#191055' size={32} ></Icon>
+                    <IconText>Azul Livelo - #191055</IconText>
+                </IconContainer>
+            </OutsideIconContainer>
 
-            <Container>
-                <Text>A fonte utilizada é a:</Text>
+            <FontContainer>
+                <SecundaryText>A fonte utilizada é a:</SecundaryText>
                 <BigText>SIGNIKA</BigText>
-            </Container>
+            </FontContainer>
 
             <Text>Todo conteúdo é consumindo a API de Localidades do IBGE:</Text>
             <LinkText>https://servicodados.ibge.gov.br/api/docs/localidades</LinkText>
