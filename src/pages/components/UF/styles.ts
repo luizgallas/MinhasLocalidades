@@ -16,8 +16,9 @@ export const Text = styled.Text`
   font-style: normal;
 `;
 
-export const List = styled.ScrollView.attrs({
-  showsVerticalScrollIndicator: false,
-})`
-  margin-top: 20px;
-`;
+export const Button = styled.TouchableOpacity`
+    border-radius: 8;
+    border: 2;
+    border-color: #191055;
+
+`; 
