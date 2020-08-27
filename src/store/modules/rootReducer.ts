@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import { searchCity } from '../modules/City/reducer';
+import { loadCities } from '../modules/City/reducer';
+import { loadUF } from '../modules/UF/reducer';
 
 export default combineReducers({
-    search: searchCity,
+    loadCities: loadCities,
+    loadUF: loadUF
 })
