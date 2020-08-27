@@ -6,6 +6,7 @@ import { StoreState } from '../../store/createStore';
 import { loadUF } from '../../store/modules/UF/actions';
 import { UF as UFObject} from '../../store/modules/UF/types';
 import axios from 'axios';
+import { loadCities } from '../../store/modules/City/actions';
 
 const Main = () => {
   const ufList = useSelector((state: StoreState) => state.loadUF.ufList);
@@ -28,13 +29,10 @@ const Main = () => {
             allUfs.push(tempUF);
         })
         allUfs.sort(function(a, b){
-          if (a.name < b.name) {
-            return -1;
-          }
-          return 1;
+          return (a.name < b.name) ? -1 : 1         
         })
         dispatch(loadUF({ uf: allUfs}));
-        console.log(ufList);
+        console.log(`UF LIST: ${ufList}`);
     });
   }
 

@@ -4,7 +4,7 @@ import * as actions from './actions';
 export type CityActions = ActionType<typeof actions>;
 
 export interface City {
-    nome: string,
+    name: string,
 };
 
 export interface CityListState {

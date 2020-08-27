@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Title, Text, StopIcon } from './styles';
 
-export default function CityBar() {
+export default function CityErrorPage() {
     return (
         <Container>
             <Title>Ops... Caminho errado!</Title>

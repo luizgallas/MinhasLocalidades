@@ -12,13 +12,11 @@ export const Title = styled.Text`
   padding-top: 32px;
   font-family: Signika-Bold;
   color: #191055;
-  font-weight: bold;
-  font-style: normal;
   margin-bottom: 32px;
 `;
 
 export const Text = styled.Text`
-    font-family: Signika;
+    font-family: Signika-Bold;
     font-size: 16px;
     text-align: center;
     color: #191055;

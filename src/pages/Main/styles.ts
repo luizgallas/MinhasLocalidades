@@ -17,8 +17,6 @@ export const Text = styled.Text`
   padding-top: 32px;
   font-family: Signika-Bold;
   color: #191055;
-  font-weight: bold;
-  font-style: normal;
   margin-bottom: 30px;
 `;
 
