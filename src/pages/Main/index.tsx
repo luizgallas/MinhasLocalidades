@@ -40,7 +40,7 @@ const Main = () => {
     <Container>
       <Text> Minha Localidade</Text>
       <ListContainer>
-          <List
+          <List //ListHeaderComponent={<Text> Minha Localidade</Text>}
             data={ufList}
             keyExtractor={(item: any) => (item.name)}
             renderItem={({item}) => (

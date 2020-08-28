@@ -1,19 +1,20 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { LoaderState } from '../../store/modules/Loader/types';
-import { Image } from 'react-native';
-import { Container } from './styles';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { ActivityIndicator } from 'react-native';
+import { Container, BackDrop } from './styles';
+import { StoreState } from '../../store/createStore';
 
 export default function Loader() {
-    const loadState = useSelector((state: LoaderState) => state.enable);
+    const loadState = useSelector((state: StoreState) => state.enableLoader.enable);
+    console.log(loadState);
 
-    if (loadState) {
-        return (
-            <Container>
-                <Image source={require('../../../assets/img/preloader.gif')} />
-            </Container>
-        )
-    } else {
-        return null;
-    }
+    return loadState ? (
+        <Container transparent>
+            <BackDrop>
+                <ActivityIndicator size="large"
+                    color="#E50191" />
+            </BackDrop>
+        </Container>
+    )
+    : null;
 };
