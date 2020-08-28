@@ -4,5 +4,5 @@ import { loadUF } from '../modules/UF/reducer';
 
 export default combineReducers({
     loadCities: loadCities,
-    loadUF: loadUF
+    loadUF: loadUF,
 })
