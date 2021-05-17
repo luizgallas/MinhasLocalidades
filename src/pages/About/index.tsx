@@ -1,46 +1,31 @@
 import React from 'react';
-import { Container,
-        Title,
-        TextDescription,
-        Text, LinkText,
-        BigText,
-        IconText,
-        IconContainer,
-        OutsideIconContainer,
-        FontContainer,
-        SecundaryText }
-    from './styles';
+import { 
+    Container,
+    Title,
+    TextDescription,
+    Text, LinkText 
+} from './styles';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Spacer from '../../components/Spacer';
 
 export default function About() {
     return (
         <Container>
             <Title>Sobre o Minha Localidade</Title>
+
+            <Spacer value={20} />
+
             <TextDescription>
-                O aplicativo Minha Localidade tem por sua finalidade realizar um
-                 treinamento para os colaboradores da Compasso que desejam treinar
-                  suas habilidades com React Native + Typescript + Redux + React Navigation.
+                O aplicativo Minha Localidade tem por sua finalidade listar todas as Unidades Federativas,
+                Municípios e Distritos pertencentes ao Brasil.
             </TextDescription>
 
-            <Text>As cores utilizadas são as que encontramos no site Livelo:</Text>
+            <Spacer value={102} />
 
-            <OutsideIconContainer>
-                <IconContainer>
-                    <Icon name='circle' color='#E50191' size={32} ></Icon>
-                    <IconText>Rosa Livelo - #E50191</IconText>
-                 </IconContainer>
-
-                <IconContainer>
-                    <Icon name='circle' color='#191055' size={32} ></Icon>
-                    <IconText>Azul Livelo - #191055</IconText>
-                </IconContainer>
-            </OutsideIconContainer>
-
-            <FontContainer>
-                <SecundaryText>A fonte utilizada é a:</SecundaryText>
-                <BigText>SIGNIKA</BigText>
-            </FontContainer>
+            <TextDescription>
+                Foi desenvolvido para fins de estudo, sendo utilizado como treinamento de React-native em 2020
+                 e como parte da disciplina de Engenharia de Software em 2021.
+            </TextDescription>
 
             <Text>Todo conteúdo é consumindo a API de Localidades do IBGE:</Text>
             <LinkText>https://servicodados.ibge.gov.br/api/docs/localidades</LinkText>

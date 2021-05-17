@@ -32,7 +32,6 @@ const Main = () => {
           return (a.name < b.name) ? -1 : 1         
         })
         dispatch(loadUF({ uf: allUfs}));
-        console.log(`UF LIST: ${ufList}`);
     });
   }
 

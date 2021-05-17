@@ -5,6 +5,7 @@ export type CityActions = ActionType<typeof actions>;
 
 export interface City {
     name: string,
+    cod: number
 };
 
 export interface CityListState {

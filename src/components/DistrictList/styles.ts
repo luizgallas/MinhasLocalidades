@@ -11,10 +11,9 @@ export const Text = styled.Text`
   text-align: center;
 `;
 
-export const CityContainer = styled.View`
+export const DistrictContainer = styled.View`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 16px 16px 12px 16px;
   border: 2px solid #191055;

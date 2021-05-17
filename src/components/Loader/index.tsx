@@ -6,7 +6,6 @@ import { StoreState } from '../../store/createStore';
 
 export default function Loader() {
     const loadState = useSelector((state: StoreState) => state.enableLoader.enable);
-    console.log(loadState);
 
     return loadState ? (
         <Container transparent>

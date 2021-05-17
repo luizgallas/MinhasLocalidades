@@ -7,7 +7,7 @@ export default function CityErrorPage() {
         <Container>
             <Title>Ops... Caminho errado!</Title>
 
-            <Text>Para acessar a lista de cidades clique em um Estado no menu UF</Text>
+            <Text>Para acessar a lista de cidades é necessário selecionar um Estado no menu UF</Text>
 
             <StopIcon name={'hand-left-outline'} color="#E50191" size={100}/>
         </Container>

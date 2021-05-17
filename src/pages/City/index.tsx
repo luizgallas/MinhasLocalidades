@@ -29,6 +29,7 @@ const City = ({route}: any)  => {
                     response.data.map((city: any) => {
                         const tempCity: CityObject = {
                             name: city.nome,
+                            cod: city.id
                         }
                         allCities.push(tempCity);
                     })
