@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { Container, Text, DistrictContainer } from './styles';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 interface DistrictComponent {
     district: any

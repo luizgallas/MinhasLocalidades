@@ -37,7 +37,7 @@ const Main = () => {
 
   return (
     <Container>
-      <Text> Minha Localidade</Text>
+      <Text> Minhas Localidades</Text>
       <ListContainer>
           <List //ListHeaderComponent={<Text> Minha Localidade</Text>}
             data={ufList}

@@ -43,7 +43,6 @@ const District = ({ city }: any)  => {
         <Container>
             <Title>Distritos</Title>
             <SubTitle>{city.name}</SubTitle>
-
             <ListContainer>
                 <List
                     data={districtList}
