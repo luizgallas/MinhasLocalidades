@@ -1,10 +1,11 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import Main from '../src/pages/Main';
-import City from '../src/pages/City';
-import About from '../src/pages/About';
+import Main from '../pages/Main';
+import City from '../pages/City';
+import About from '../pages/About';
 import { Text, StyleSheet } from 'react-native';
+import AppStack from './appStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,7 +20,7 @@ function BottomTabs() {
                         )
                     }
                 }}/>
-                <Tab.Screen name="City" component={City} options={{
+                <Tab.Screen name="City" component={AppStack} options={{
                     tabBarLabel: ({focused}) => {
                         return (
                             <Text style={labelStyle(focused).labelText}>Cidades</Text>

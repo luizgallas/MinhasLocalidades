@@ -12,3 +12,7 @@ export interface UF {
 export interface UFListState {
     readonly ufList: Array<UF>
 };
+
+export interface SelectedUFState {
+    readonly selectUF: UF | null
+};

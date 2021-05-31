@@ -4,27 +4,26 @@ import { StoreState } from '../../store/createStore';
 import CityErrorPage from '../../components/CityErrorPage';
 import { Container, Title, SubTitle, List, ListContainer } from './styles';
 import CityList from "../../components/CityList";
-import axios from 'axios';
 import { City as CityObject } from '../../store/modules/City/types';
 import { loadCities } from '../../store/modules/City/actions';
+import { selectUF } from '../../store/modules/UF/actions';
 import { enableLoader } from '../../store/modules/Loader/actions';
+import api from '../../services'
 
-const City = ({route}: any)  => {
+const City = ()  => {
     const cityList = useSelector((state: StoreState) => state.loadCities.cityList);
     const dispatch = useDispatch(); //dispatch(ACTION(PARAMS))
-
-    const uf = route?.params?.uf ? route.params.uf : null;
+    const uf = useSelector((state: StoreState ) => state.selectUF.selectUF)
 
     useEffect(() => {
         handleFillList();
-        dispatch(loadCities({cities: []}))
     }, [uf]);
 
     function handleFillList() {
         if(uf) {
             dispatch(enableLoader({loader: true}));
             let allCities = Array<CityObject>();
-            axios.get(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf.initials}/municipios`)
+            api.get(`estados/${uf.initials}/municipios`)
                 .then(response => {
                     response.data.map((city: any) => {
                         const tempCity: CityObject = {
@@ -58,10 +57,10 @@ const City = ({route}: any)  => {
                     <List
                         data={cityList}
                         keyExtractor={(item: any) => (item.name)}
-                        renderItem={({item}) => (
-                        <CityList
-                            city={item}
-                        />
+                        renderItem={({ item }: any) => (
+                            <CityList
+                                city={item}
+                            />
                         )}
                     />
                 </ListContainer>

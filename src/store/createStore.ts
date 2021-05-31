@@ -1,12 +1,14 @@
 import { createStore, applyMiddleware, Middleware, Reducer } from 'redux';
-import { CityListState, CityActions } from './modules/City/types';
-import { UFListState, UFActions } from './modules/UF/types';
+import { CityListState, CityActions, SelectCityState } from './modules/City/types';
+import { UFListState, UFActions, SelectedUFState } from './modules/UF/types';
 import { LoaderState, LoaderActions } from './modules/Loader/types';
 import { DistrictListState } from './modules/District/types';
 
 export interface StoreState {
     loadCities: CityListState,
+    selectCity: SelectCityState,
     loadUF: UFListState,
+    selectUF: SelectedUFState,
     enableLoader: LoaderState,
     loadDistricts: DistrictListState
 }

@@ -11,7 +11,7 @@ export const Text = styled.Text`
   text-align: center;
 `;
 
-export const CityContainer = styled.View`
+export const CityContainer = styled.TouchableOpacity`
   display: flex;
   flex-direction: row;
   justify-content: space-between;

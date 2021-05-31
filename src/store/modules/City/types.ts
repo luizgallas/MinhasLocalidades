@@ -11,3 +11,8 @@ export interface City {
 export interface CityListState {
     readonly cityList: Array<City>
 };
+
+export interface SelectCityState {
+    readonly selectCity: City | null
+};
+
